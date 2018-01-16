@@ -8,3 +8,9 @@ GET     /                           controllers.HomeController.index
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+# An service rest
+GET   /places               controllers.RestControllerPlace.listPlaces
+
+# An service post
+POST   /places               controllers.RestControllerPlace.savePlace
